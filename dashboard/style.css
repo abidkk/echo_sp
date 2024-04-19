@@ -1,0 +1,267 @@
+
+
+#container {
+  background-color: rgb(8, 6, 6);
+  padding: 2px;
+}
+
+.sidebar {
+  width: 20%;
+  background-color:#131417;
+  color: white;
+  float: left;
+  border : 1px solid #161820;
+}
+
+.contant {
+  width: 80%;
+  background-color:#131417;
+  float: left;
+  padding: 10px;
+  padding-bottom: 50px;
+}
+
+.sidebar > section > .logo_head {
+  padding: 20px 0px 20px 25px;
+}
+
+.sidebar > section > div {
+  padding: 20px 0px 20px 50px;
+  border: 1px solid #161820;
+  display: flex;
+  gap: 15px;
+  cursor: pointer;
+}
+
+.sidebar > section > div > img {
+  float: left;
+}
+
+.logo > div {
+  float: left;
+  padding: 10px 10px 10px 10px;
+  font-size: small;
+}
+
+/*  Media Queary */
+@media screen and (max-width: 480px) {
+  .contant {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .sidebar {
+    /* visibility: hidden; */
+    width: 100%;
+  }
+}
+
+/* Contant Css */
+
+.header {
+  border-bottom: 1px solid #161820;
+  height: 100px;
+  padding: 10px;
+  /* margin: 5px; */
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.header > div > input {
+  width: 100%;
+  padding: 8px;
+  padding-right: 40px;
+  border: 1px solid #161820;
+  background-color: #141519;
+  border-radius: 5px;
+  position: relative;
+}
+
+.header > div > img {
+  position: absolute;
+  float: right;
+  margin-left: -30px;
+  top: 50px;
+}
+
+.header > .profile {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header > .profile > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+}
+p {
+  margin-bottom: 1rem;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.station {
+  font-size: 15px;
+}
+
+/* Media query for Header */
+@media screen and (max-width: 480px) {
+  .header {
+    visibility: hidden;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header > .profile > .icons {
+    visibility: visible;
+    margin: 10px;
+  }
+}
+
+/* Results Section */
+.results {
+  height: 300px;
+  padding: 10px;
+  display: flex;
+  gap: 5px;
+  color: white;
+}
+
+.results > div {
+  margin: 2px;
+  height: 280px;
+  background-color: #161820;
+  border: 1px solid #22242F;
+  border-radius: 5px;
+  width: 100%;
+  padding: 15px;
+  margin: 10px;
+}
+
+.results > .history_info {
+  width: 70%;
+}
+
+.results > .add_suspect {
+  width: 70%;
+}
+
+.results > .search_history > form > input {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0px;
+  /* border: 1px solid rgb(64, 35, 35); */
+  border: none;
+  background-color: #141519;
+  border: 1px solid #161820;
+  border-radius: 5px;
+  position: relative;
+}
+
+.search_history > form > div {
+  float: right;
+  padding-top: 10px;
+}
+
+.search_history > form > div > button {
+  background: red;
+  border: none;
+  color: white;
+  padding: 7px 30px;
+  border-radius: 10px;
+}
+
+/*  Media Queary  for results*/
+@media screen and (max-width: 480px) {
+  .results {
+    display: contents;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .results > .history_info {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .results > .add_suspect {
+    width: 100%;
+  }
+}
+
+.box {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  margin: 0px;
+  padding: 0px;
+}
+
+.box > div > div {
+  width: 100%;
+  margin: 25px 0px;
+  background: rgb(3, 0, 0);
+  padding: 10px;
+  height: 80px;
+  border-radius: 5px;
+}
+
+.box > div > div > h4 {
+  font-size: 30px;
+}
+
+.box > div > div > p {
+  font-size: 10px;
+}
+
+.add_suspect {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.contant > .incoming_calls{
+    background-color: rgb(2, 1, 1);
+    height: 300px;
+    margin: 20px;
+    color: white;
+}
+.contant > .incoming_calls > h5{
+    background-color: rgb(19, 19, 44);
+    padding: 10px 20px;
+ border-radius: 10px 10px 0px 0px;
+}
+
+
+
+table {
+    margin-top: 20px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Style the table headers */
+th {
+    /* background-color: #f1f1f1; */
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid rgb(233, 215, 215);
+    border: 1px solid #dddddd; /* Added border style for th */
+}
+
+/* Style the table data cells */
+td {
+    padding: 10px;
+    text-align: justify;
+    border: 1px solid #dddddd; /* Added border style for td */
+    /* border : 2px solid white; */
+    font-size: 12px;
+}
