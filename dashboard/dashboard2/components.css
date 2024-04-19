@@ -1,0 +1,18 @@
+
+input{
+    background-color: var(--bg-primary-color);
+    color: rgb(176, 168, 168);
+    padding: 5px 10px;
+    width: 300px;
+    border-radius: 5px;
+    border: 1px solid var(--border-primary-color);   
+}
+
+
+button{
+    background-color:var(--button-bg);
+    border: 0px;
+    padding: 5px 20px;
+    border-radius: 5px;
+    color: white;
+}
