@@ -1,0 +1,296 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+p,
+h4 {
+  margin: 0;
+}
+
+:root {
+  --bg-primary-color: #131417;
+  
+  --bg-secondary-color: #2a489e; 
+  --border-primary-color: #161820;
+  --card-bg: #161820;
+  --card-head-bg: #1B2440;
+  --button-bg: #e22128;
+}
+
+main {
+  height: 100vh;
+  color: white;
+  background-color: var(--bg-primary-color);
+}
+
+.sidebar {
+  width: 20vw;
+  height: 100%;
+  overflow-y: auto;
+  position: absolute;
+  background-color: var(--bg-primary-color);
+  border: 1px solid var(--border-primary-color);
+  transition: all 0.5s ease;
+}
+
+.sidebar_head {
+  display: flex;
+  align-items: center;
+  padding: 10px 0px 10px 20px;
+  gap: 20px;
+  padding-top: 10px;
+}
+.officer_profile {
+  padding: 30px;
+}
+
+.nav_dash {
+  background-color: var(--bg-secondary-color);
+  border: 1px solid var(--border-primary-color);
+  border: 1px solid #161820;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  cursor: pointer;
+  align-items: center;
+  padding: 20px 10px 20px 40px;
+}
+
+.navs {
+  padding: 20px 10px 20px 40px;
+  border: 1px solid #323546;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  cursor: pointer;
+  align-items: center;
+  font-size: 16px;
+}
+
+.contant {
+  background-color: #000000;
+  width: 80vw;
+  margin-left: 20vw;
+  border: 1px solid var(--border-primary-color);
+
+  height: 100vh;
+}
+
+.menu-btn {
+  background-color: transparent;
+  border: 0px;
+}
+
+/* Contant Css */
+.navbar_s {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  color: white;
+  padding: 10px;
+}
+
+.nav_img {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+}
+/* Header */
+.header {
+  display: flex;
+  flex: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000000;
+  padding: 10px;
+}
+
+.profile {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: center;
+}
+
+input {
+  background-color: var(--bg-primary-color);
+  color: rgb(176, 168, 168);
+  padding: 5px 10px;
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid var(--border-primary-color);
+}
+
+button {
+  background-color: var(--button-bg);
+  border: 0px;
+  padding: 5px 20px;
+  border-radius: 5px;
+  color: white;
+  width: 100px;
+}
+
+.seachInput {
+  width: 400px;
+  background-color: #000000;
+  position: relative;
+}
+
+.searchLogo {
+  position: absolute;
+  margin-left: -30px;
+  top: 28px;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.history {
+  display: flex;
+  flex: wrap;
+  flex-direction: row;
+  padding: 10px;
+  gap: 10px;
+}
+
+.box1{
+  width: 60%;
+  /* height: 200px; */
+  background-color: var(--border-primary-color);
+  border: 1px solid #050810;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.box2, .box3 {
+  width: 40%;
+  /* height: 200px; */
+  background-color: var(--border-primary-color);
+  border: 1px solid #050810;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.history_form {
+  margin: 10px 0px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 10px;
+
+}
+
+.box2{
+  width: 100;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  flex-direction: row;
+  justify-content: space-between;
+  
+}
+
+.b2row{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.b2row > div{
+  width: calc(50% - 10px);
+  height: 100%;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-content: space-between;
+  border: 1px solid rgb(38, 36, 36);
+}
+
+.num{
+ font-size: 40px;
+}
+
+.des{
+  font-size: 10px;
+  padding-top: 20px;
+}
+
+.box3{
+  background-color: var( --card-head-bg);
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (min-width: 1140px) {
+  .menu {
+    display: none;
+  }
+  .officer_profile {
+    display: none;
+  }
+
+  .navbar_s {
+    display: none;
+  }
+}
+
+/* Media Query */
+@media screen and (max-width: 1024px) {
+  .sidebar {
+    left: -100vw;
+    width: 100%;
+    height: 100vh;
+    top: 70px;
+  }
+  .sidebar_head {
+    display: none;
+  }
+
+  .contant {
+    margin-left: 0vw;
+    width: 100vw;
+  }
+
+  .header > .form {
+    display: none;
+  }
+
+  .header > .form {
+    display: none;
+  }
+
+  .history {
+    flex-direction: column;
+  }
+
+  .box1, .box2, .box3{
+    width: 100%;
+  }
+
+}
+
+@media screen and (max-width: 1024px) {
+  /* .header > .profile > .officerImage,
+  .header > .profile > .officerName {
+    display: none;
+  }
+  .header > .profile > .dots {
+    display: none;
+  } */
+
+  .header {
+    display: none;
+  }
+}
