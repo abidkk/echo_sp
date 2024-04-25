@@ -181,10 +181,14 @@
                                 <p class="box-text">Team Members</p>
                             </div>
                             <div class="boox">
-                                <h4 class="box-num">125 <span><img src="./public/icons/graph2.png" alt="graph" width="25px" height="38px" class="graph-icon"></span></h4>
+                                <h4 class="box-num">125
+                                    <!-- <span><img src="./public/icons/graph2.png" alt="graph" width="25px" height="38px"
+                                            class="graph-icon"></span> -->
+
+                                </h4>
                                 <p class="box-text">No. of Cases Registered</p>
                                 <!-- <img src="./public/icons/graph2.png" alt="graph" width="25px" height="38px" class="graph-icon"> -->
-                           
+
                             </div>
                         </div>
                         <div class="rows">
@@ -386,8 +390,9 @@
                     <div class="map">
                         <div id="map"></div>
                         <div class="map-search">
-                            <input type="text" placeholder="search Police Station..." class="map-search-input">
-                            <img src="./public/search_icon.png" alt="search" class="map-search-logo">
+                            <input type="text" placeholder="Search Police Station..." class="map-search-input">
+                            <img src="./public/search_icon.png" alt="search" class="map-search-logo" width="18"
+                                height="18">
                         </div>
                     </div>
                     <div class="records">
@@ -474,6 +479,63 @@
                             <p>Messages</p>
                             <p class="view-history">View all Messages</p>
                         </div>
+
+                        <div class="messages-list">
+                            <!--  -->
+                            <div class="msg-sec">
+                                <div class="msg-contant">
+                                    <img src="./public/msg-images/user1.png" alt="msg" width="50" height="50">
+                                    <div>
+                                        <p class="msg-name">Waseem Malik</p>
+                                        <p class="msg-text">Lorem, ipsum dolor sit amet consect ...</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img src="./public/dot_icon.png" alt="icon" width="4px" height="15.75px">
+                                </div>
+                            </div>
+
+                            <!--  -->
+                            <div class="msg-sec">
+                                <div class="msg-contant">
+                                    <img src="./public/msg-images/user2.png" alt="msg" width="50" height="50">
+                                    <div>
+                                        <p class="msg-name">Waseem Malik</p>
+                                        <p class="msg-text">Lorem, ipsum dolor sit amet consect ...</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img src="./public/dot_icon.png" alt="icon" width="4px" height="15.75px">
+                                </div>
+                            </div>
+                            <!--  -->
+                            <div class="msg-sec">
+                                <div class="msg-contant">
+                                    <img src="./public/msg-images/user3.png" alt="msg" width="50" height="50">
+                                    <div>
+                                        <p class="msg-name">Waseem Malik</p>
+                                        <p class="msg-text">Lorem, ipsum dolor sit amet consect ...</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img src="./public/dot_icon.png" alt="icon" width="4px" height="15.75px">
+                                </div>
+                            </div>
+
+                            <!--  -->
+                            <div class="msg-sec" style="border-bottom: 0px;">
+                                <div class="msg-contant">
+                                    <img src="./public/msg-images/user4.png" alt="msg" width="50" height="50">
+                                    <div>
+                                        <p class="msg-name">Waseem Malik</p>
+                                        <p class="msg-text">Lorem, ipsum dolor sit amet consect ...</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img src="./public/dot_icon.png" alt="icon" width="4px" height="15.75px">
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                 </div>
@@ -493,9 +555,9 @@
 
     <script src="https://cdn.datatables.net/2.0.5/js/dataTables.js"></script>
     <script src="https://cdn.datatables.net/2.0.5/js/dataTables.min.js"></script>
-        <!-- prettier-ignore -->
-        <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
-            ({key: "AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg", v: "weekly"});</script>
+    <!-- prettier-ignore -->
+    <script>(g => { var h, a, k, p = "The Google Maps JavaScript API", c = "google", l = "importLibrary", q = "__ib__", m = document, b = window; b = b[c] || (b[c] = {}); var d = b.maps || (b.maps = {}), r = new Set, e = new URLSearchParams, u = () => h || (h = new Promise(async (f, n) => { await (a = m.createElement("script")); e.set("libraries", [...r] + ""); for (k in g) e.set(k.replace(/[A-Z]/g, t => "_" + t[0].toLowerCase()), g[k]); e.set("callback", c + ".maps." + q); a.src = `https://maps.${c}apis.com/maps/api/js?` + e; d[q] = f; a.onerror = () => h = n(Error(p + " could not load.")); a.nonce = m.querySelector("script[nonce]")?.nonce || ""; m.head.append(a) })); d[l] ? console.warn(p + " only loads once. Ignoring:", g) : d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)) })
+            ({ key: "AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg", v: "weekly" });</script>
     <script src="./app.js"></script>
 </body>
 

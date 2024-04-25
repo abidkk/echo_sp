@@ -7,6 +7,9 @@ p,
 h4 {
   margin: 0;
 }
+p {
+  font-size: 14px;
+}
 
 :root {
   --bg-primary-color: #131417;
@@ -69,18 +72,16 @@ main {
   font-size: 16px;
 }
 
-.logout{
+.logout {
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
   margin: 20px;
- 
-  
 }
-.logout-btn{
+.logout-btn {
   color: white;
-  background-color: #E22128;
+  background-color: #e22128;
   width: 80%;
   padding: 8px;
   border: 0px;
@@ -88,7 +89,6 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
 }
 
 /* Contant Css */
@@ -237,7 +237,6 @@ input {
   display: flex;
   gap: 10px;
   justify-content: space-between;
-
 }
 
 .boox {
@@ -257,14 +256,6 @@ input {
 }
 .box-text {
   font-size: 10px;
-}
-.graph-icon{
-  /* position: absolute;
-  right: 10px;
-  top: 15px;
-  left: 142px;
-  top: 20px; */
-  
 }
 
 .table1 {
@@ -294,6 +285,8 @@ input {
   height: 360px;
   background-color: #161820;
   border-radius: 10px;
+  font-size: 14px;
+  color: #ffffff;
 }
 
 .dis-hir {
@@ -361,7 +354,7 @@ input {
   left: 50px;
   bottom: 20px;
 }
-.map-search-input{
+.map-search-input {
   width: 100%;
   padding-right: 30px;
   border: 1px solid #161820;
@@ -380,6 +373,8 @@ input {
 }
 .recs {
   padding: 10px;
+  font-size: 14px;
+  color: #ffffff;
 }
 
 .graph-section {
@@ -401,6 +396,7 @@ input {
   background-color: #161820;
   padding: 10x;
   position: relative;
+  border-radius: 10px;
 }
 
 .actions {
@@ -408,6 +404,40 @@ input {
   gap: 10px;
   align-items: center;
 }
+
+.messages-list {
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.msg-sec {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #22242f;
+  padding: 10px 0px;
+}
+
+.msg-contant {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.msg-name {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.msg-text {
+  font-size: 12px;
+}
+
 /* Media Query */
 
 @media screen and (min-width: 1140px) {
@@ -422,7 +452,7 @@ input {
     display: none;
   }
 
-  .logout{
+  .logout {
     display: none;
   }
 }
