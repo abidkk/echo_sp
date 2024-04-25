@@ -89,6 +89,13 @@
                     <img src="./public/Vector.png" alt="icon" width="20" height="20">
                     <p>Settings</p>
                 </div>
+
+                <div class="logout">
+                    <button class="logout-btn">
+                        <span>Logout</span>
+                        <img src="./public/icons/logout-icon.png" alt="logout" width="20" height="20">
+                    </button>
+                </div>
             </div>
 
 
@@ -174,18 +181,22 @@
                                 <p class="box-text">Team Members</p>
                             </div>
                             <div class="boox">
-                                <h4 class="box-num">125</h4>
+                                <h4 class="box-num">125 <span><img src="./public/icons/graph2.png" alt="graph" width="25px" height="38px" class="graph-icon"></span></h4>
                                 <p class="box-text">No. of Cases Registered</p>
+                                <!-- <img src="./public/icons/graph2.png" alt="graph" width="25px" height="38px" class="graph-icon"> -->
+                           
                             </div>
                         </div>
                         <div class="rows">
                             <div class="boox">
                                 <h4 class="box-num">105</h4>
                                 <p class="box-text">No. of Cases Pending</p>
+                                <!-- <img src="./public/icons/graph2.png" alt="graph" width="25px" height="38px" class="graph-icon"> -->
                             </div>
                             <div class="boox">
                                 <h4 class="box-num">20</h4>
                                 <p class="box-text">No. of Cases Solved</p>
+                                <!-- <img src="./public/icons/graph1.png" alt="graph" width="25px" height="38px" class="graph-icon"> -->
                             </div>
                         </div>
 
@@ -373,8 +384,9 @@
                 <!--  -->
                 <div class="stations">
                     <div class="map">
+                        <div id="map"></div>
                         <div class="map-search">
-                            <input type="text" placeholder="search Police Station...">
+                            <input type="text" placeholder="search Police Station..." class="map-search-input">
                             <img src="./public/search_icon.png" alt="search" class="map-search-logo">
                         </div>
                     </div>
@@ -481,6 +493,9 @@
 
     <script src="https://cdn.datatables.net/2.0.5/js/dataTables.js"></script>
     <script src="https://cdn.datatables.net/2.0.5/js/dataTables.min.js"></script>
+        <!-- prettier-ignore -->
+        <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
+            ({key: "AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg", v: "weekly"});</script>
     <script src="./app.js"></script>
 </body>
 

@@ -1,10 +1,7 @@
 let menu = () => {
   // alert("Click ")
-  // document.getElementsByClassName('sidebar')[0].style.margin-left = 30vw;
   document.getElementsByClassName("sidebar")[0].style.marginLeft = "100vw";
   document.getElementsByClassName("sidebar")[0].style.width = "100%";
-  // document.getElementsByClassName('sidebar')[0].style.marginTop = '45px';
-  // document.getElementsByClassName('sidebar')[0].style.top = '30';
 };
 $(document).ready(function () {
   var sidebarOpen = false;
