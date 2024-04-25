@@ -10,11 +10,11 @@ h4 {
 
 :root {
   --bg-primary-color: #131417;
-  
-  --bg-secondary-color: #2a489e; 
+
+  --bg-secondary-color: #2a489e;
   --border-primary-color: #161820;
   --card-bg: #161820;
-  --card-head-bg: #1B2440;
+  --card-head-bg: #1b2440;
   --button-bg: #e22128;
 }
 
@@ -26,9 +26,9 @@ main {
 
 .sidebar {
   width: 20vw;
-  height: 100%;
+  height: 100vh;
   overflow-y: auto;
-  position: absolute;
+  position: fixed;
   background-color: var(--bg-primary-color);
   border: 1px solid var(--border-primary-color);
   transition: all 0.5s ease;
@@ -41,6 +41,7 @@ main {
   gap: 20px;
   padding-top: 10px;
 }
+
 .officer_profile {
   padding: 30px;
 }
@@ -59,7 +60,7 @@ main {
 
 .navs {
   padding: 20px 10px 20px 40px;
-  border: 1px solid #323546;
+  border: 1px solid var(--border-primary-color);
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
@@ -68,12 +69,11 @@ main {
   font-size: 16px;
 }
 
+/* Contant Css */
 .contant {
-  background-color: #000000;
+  background-color: var(--bg-primary-color);
   width: 80vw;
   margin-left: 20vw;
-  border: 1px solid var(--border-primary-color);
-
   height: 100vh;
 }
 
@@ -82,13 +82,12 @@ main {
   border: 0px;
 }
 
-/* Contant Css */
 .navbar_s {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  background-color: black;
+  background-color: #14151a;
   padding: 10px;
 }
 
@@ -104,8 +103,8 @@ main {
   flex: wrap;
   justify-content: space-between;
   align-items: center;
-  background-color: #000000;
   padding: 10px;
+  border: 1px solid#161820;
 }
 
 .profile {
@@ -116,27 +115,30 @@ main {
 }
 
 input {
-  background-color: var(--bg-primary-color);
+  background-color: #141519;
+  border: 1px solid #161820;
   color: rgb(176, 168, 168);
   padding: 5px 10px;
-  width: 100%;
-  height: 40px;
+  /* width: 100%; */
+  height: 35px;
   border-radius: 5px;
-  border: 1px solid var(--border-primary-color);
 }
 
-button {
+.button {
   background-color: var(--button-bg);
   border: 0px;
   padding: 5px 20px;
   border-radius: 5px;
   color: white;
+  width: 120px;
+  float: right;
   /* width: 100px; */
 }
 
 .seachInput {
   width: 400px;
-  background-color: #000000;
+  background-color: #141519;
+  border: 1px solid #161820;
   position: relative;
 }
 
@@ -152,85 +154,222 @@ button {
   gap: 20px;
 }
 
-.history {
-  display: flex;
-  flex: wrap;
-  flex-direction: row;
-  padding: 10px;
-  gap: 10px;
+.contant-sec {
+  width: 100%;
+  background-color: var(--bg-primary-color);
+  /* height: 100vh; */
+  /* padding: 10px; */
 }
 
-.box1{
-  width: 60%;
-  /* height: 200px; */
-  background-color: var(--border-primary-color);
-  border: 1px solid #050810;
-  padding: 10px;
-  border-radius: 10px;
-}
-
-.box2, .box3 {
-  width: 40%;
-  /* height: 200px; */
-  background-color: var(--border-primary-color);
-  border: 1px solid #050810;
-  padding: 10px;
-  border-radius: 10px;
-}
-
-.history_form {
-  margin: 10px 0px;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  gap: 10px;
-
-}
-
-.box2{
-  width: 100;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  flex-direction: row;
-  justify-content: space-between;
-  
-}
-
-.b2row{
+.card1 {
   width: 100%;
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+  height: 260px;
+  padding: 10px;
   justify-content: space-between;
+  gap: 10px;
 }
 
-.b2row > div{
-  width: calc(50% - 10px);
-  height: 100%;
+.box1 {
+  width: 60%;
+  padding: 20px;
+  background-color: #161820;
   border-radius: 10px;
+  border: 1px solid #22242f;
+}
+.search-history {
+  /* padding: 10px; */
+  padding: 10px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.box2,
+.box3 {
+  width: 40%;
   padding: 10px;
+  background-color: #161820;
+  border-radius: 10px;
+}
+
+.box2 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+}
+
+.box3 {
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
-  align-content: space-between;
-  border: 1px solid rgb(38, 36, 36);
-}
-
-.num{
- font-size: 40px;
-}
-
-.des{
-  font-size: 10px;
-  padding-top: 20px;
-}
-
-.box3{
-  background-color: var( --card-head-bg);
-  display: flex;
   justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background-color: #1b2440;
 }
+
+.rows {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.boox {
+  width: 100%;
+  /* height: 125px; */
+  border: 1px solid #22242f;
+  height: 100px;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.box-num {
+  font-size: 30px;
+}
+.box-text {
+  font-size: 10px;
+}
+
+.table1 {
+  padding: 10px;
+}
+
+.card-head {
+  background-color: #1b2440;
+  padding: 5px 20px;
+  /* margin: 0px 10px; */
+  border-radius: 10px 10px 0px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.view-history {
+  padding: 5px 10px;
+  background-color: #131417;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.table-sheet {
+  /* margin: 0px  10px; */
+  padding: 0px 10px;
+  height: 420px;
+  background-color: #161820;
+}
+
+.dis-hir {
+  margin-top: 20px;
+  /* width: 100%; */
+  height: auto;
+  padding: 10px;
+}
+
+.officers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between;
+  background-color: #161820;
+}
+
+.officer {
+  width: 15%;
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.officer-name {
+  font-size: 15px;
+}
+
+.officer-rank {
+  font-size: 12px;
+}
+
+.officer-btn {
+  background-color: #e22128;
+  width: 150px;
+  border: 0px;
+  border-radius: 5px;
+  font-size: 12px;
+  color: white;
+  padding: 5px;
+}
+
+.stations {
+  height: 420px;
+  padding: 10px;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 10px;
+}
+
+.map {
+  width: 523px;
+  background-color: #161820;
+  padding: 10x;
+  position: relative;
+}
+.map-search {
+  position: absolute;
+  bottom: 10px;
+  left: 70px;
+  width: 80%;
+}
+.map-search-logo {
+  position: absolute;
+  right: 90px;
+  top: 8px;
+  border-radius: 10px;
+}
+
+.records {
+  width: 100%;
+  background-color: #161820;
+  border-radius: 10px;
+}
+.recs {
+  padding: 10px;
+}
+
+.graph-section {
+  height: 420px;
+  padding: 10px;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 10px;
+}
+
+.graph {
+  width: 100%;
+  background-color: #161820;
+  border-radius: 10px;
+}
+
+.messages {
+  width: 523px;
+  background-color: #161820;
+  padding: 10x;
+  position: relative;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+/* Media Query */
 
 @media screen and (min-width: 1140px) {
   .menu {
@@ -244,14 +383,13 @@ button {
     display: none;
   }
 }
-
-/* Media Query */
 @media screen and (max-width: 1024px) {
   .sidebar {
     left: -100vw;
     width: 100%;
     height: 100vh;
     top: 70px;
+    position: absolute;
   }
   .sidebar_head {
     display: none;
@@ -260,6 +398,7 @@ button {
   .contant {
     margin-left: 0vw;
     width: 100vw;
+    height: 100vh;
   }
 
   .header > .form {
@@ -270,14 +409,29 @@ button {
     display: none;
   }
 
-  .history {
+  .card1 {
     flex-direction: column;
+    height: auto;
   }
 
-  .box1, .box2, .box3{
+  .box1,
+  .box2,
+  .box3 {
     width: 100%;
   }
 
+  .table1,
+  .dis-hir {
+    display: none;
+  }
+
+  .stations {
+    display: none;
+  }
+
+  .graph-section {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 1024px) {
