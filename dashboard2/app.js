@@ -14,7 +14,15 @@ $(document).ready(function () {
       sidebarOpen = false;
     }
   });
+
+
+
+  $("#myButton").click(function(){
+    alert("Button clicked!");
 });
+});
+
+
 
 let table1 = new DataTable("#myTable");
 let table2 = new DataTable("#records-table");

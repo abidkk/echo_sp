@@ -303,7 +303,7 @@ input {
 
 .officers {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 10px;
   justify-content: space-between;
   background-color: #161820;
@@ -319,6 +319,7 @@ input {
   align-items: center;
   text-align: center;
   gap: 10px;
+  overflow: hidden;
 }
 .officer-name {
   font-size: 15px;
@@ -366,7 +367,7 @@ input {
 }
 .map-search-logo {
   position: absolute;
-  right: 5px;
+  right: 8px;
   top: 8px;
   border-radius: 10px;
 }
@@ -388,6 +389,20 @@ input {
   display: flex;
   flex-wrap: nowrap;
   gap: 10px;
+}
+.graph-btns{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.graph-year{
+    padding: 5px 15px;
+    background-color: #131417;
+    border-radius: 20px;
+    font-size: 12px;
+
 }
 
 .graph {
@@ -515,14 +530,6 @@ input {
 }
 
 @media screen and (max-width: 1024px) {
-  /* .header > .profile > .officerImage,
-  .header > .profile > .officerName {
-    display: none;
-  }
-  .header > .profile > .dots {
-    display: none;
-  } */
-
   .header {
     display: none;
   }
