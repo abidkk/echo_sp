@@ -13,7 +13,6 @@ p {
 
 :root {
   --bg-primary-color: #131417;
-
   --bg-secondary-color: #2a489e;
   --border-primary-color: #161820;
   --card-bg: #161820;
@@ -207,7 +206,10 @@ input {
   flex-direction: column;
   gap: 10px;
 }
-
+.btn-box{
+  display: flex;
+  justify-content: end;
+}
 .box2,
 .box3 {
   width: 40%;
@@ -250,7 +252,10 @@ input {
   flex-direction: column;
   gap: 30px;
 }
-
+.box-icon{
+  display: flex;
+  justify-content: space-between;
+}
 .box-num {
   font-size: 30px;
 }
