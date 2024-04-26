@@ -396,7 +396,11 @@
                 <!--Stations Map  -->
                 <div class="stations">
                     <div class="map">
-                        <div id="map"></div>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d14484.597359274117!2d67.0814713!3d24.824566!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1714148296157!5m2!1sen!2s"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade" style="border-radius: 10px"></iframe>
+
                         <div class="map-search">
                             <input type="text" placeholder="Search Police Station..." class="map-search-input">
                             <img src="./public/icons/search_icon.png" alt="search" class="map-search-logo" width="18"
@@ -484,8 +488,13 @@
                                 <p class="graph-year">2019</p>
                             </div>
                         </div>
-
+                        <!-- chart -->
+                        <div>
+                            <canvas id="myChart" class="myChart" ></canvas>
+                        </div>
+                        <!-- <div id="myChart"></div> -->
                     </div>
+
                     <div class="messages">
                         <div class="card-head">
                             <p>Messages</p>
@@ -551,7 +560,6 @@
                     </div>
                 </div>
                 <!--  -->
-
             </section>
         </div>
     </main>
@@ -564,6 +572,7 @@
 
     <script src="https://cdn.datatables.net/2.0.5/js/dataTables.js"></script>
     <script src="https://cdn.datatables.net/2.0.5/js/dataTables.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <!-- prettier-ignore -->
     <script src="./app.js"></script>
 </body>
