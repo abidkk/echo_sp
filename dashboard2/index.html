@@ -9,6 +9,8 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.datatables.net/2.0.5/css/dataTables.dataTables.css" />
     <link rel="stylesheet" href="https://cdn.datatables.net/2.0.5/css/dataTables.dataTables.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
 
     <link rel="stylesheet" href="./style.css">
 
@@ -151,10 +153,13 @@
                     </div>
                 </div>
 
-                <div>
-                    <img src="../public/searchbar.png" alt="search" width="30" height="30">
-                    <img src="../public/logout.png" alt="logout" width="30" height="30">
-                    <img src="../public/logout.png" alt="logout" width="30" height="30">
+                <div class="navbar_s_icons">
+                    <form action="">
+                        <input type="text" placeholder="Search..." style="width: 100px;">
+                    </form>
+                    <img src="../public/icons/searchbar.png" alt="search" width="30" height="30">
+                    <img src="../public/icons/logout.png" alt="logout" width="30" height="30">
+                    <img src="../public/icons/logout.png" alt="logout" width="30" height="30">
                 </div>
             </div>
 
@@ -395,17 +400,22 @@
 
                 <!--Stations Map  -->
                 <div class="stations">
-                    <div class="map">
-                        <iframe
+                    <div class="map_section">
+                        <!-- <iframe
                             src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d14484.597359274117!2d67.0814713!3d24.824566!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1714148296157!5m2!1sen!2s"
                             width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade" style="border-radius: 10px"></iframe>
-
-                        <div class="map-search">
-                            <input type="text" placeholder="Search Police Station..." class="map-search-input">
-                            <img src="./public/icons/search_icon.png" alt="search" class="map-search-logo" width="18"
-                                height="18">
+                            referrerpolicy="no-referrer-when-downgrade" style="border-radius: 10px"></iframe> -->
+                        <div id="map">
+                            
+                            <div class="map-search">
+                                <input type="text" placeholder="Search Police Station..." class="map-search-input">
+                                <img src="./public/icons/search_icon.png" alt="search" class="map-search-logo" width="18"
+                                    height="18">
+                            </div>
                         </div>
+
+
+
                     </div>
                     <div class="records">
                         <div class="card-head">
@@ -489,9 +499,9 @@
                             </div>
                         </div>
                         <!-- chart -->
-                        <div>
-                            <canvas id="myChart" class="myChart" ></canvas>
-                        </div>
+
+                        <canvas id="myChart" class="myChart" height="350"></canvas>
+
                         <!-- <div id="myChart"></div> -->
                     </div>
 
@@ -505,7 +515,7 @@
                             <!--  -->
                             <div class="msg-sec">
                                 <div class="msg-contant">
-                                    <img src="./public/msg-images/user1.png" alt="msg" width="50" height="50">
+                                    <img src="./public/msg-images/user1.png" alt="msg">
                                     <div>
                                         <p class="msg-name">Uzair Arif - ASI</p>
                                         <p class="msg-text">Lorem, ipsum dolor sit amet consect ...</p>
@@ -573,6 +583,9 @@
     <script src="https://cdn.datatables.net/2.0.5/js/dataTables.js"></script>
     <script src="https://cdn.datatables.net/2.0.5/js/dataTables.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <!-- prettier-ignore -->
     <script src="./app.js"></script>
 </body>

@@ -105,20 +105,27 @@ main {
 
 .navbar_s {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
   background-color: #14151a;
   padding: 10px;
+  gap: 10px;
 }
 
 .nav_img {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: center;
   gap: 10px;
   justify-content: start;
 }
+.navbar_s_icons{
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 5px;
+}
+
 /* Header */
 .header {
   display: flex;
@@ -322,6 +329,8 @@ input {
   overflow: hidden;
 }
 .officer-name {
+  width:180px;
+  overflow: hidden;
   font-size: 15px;
 }
 
@@ -347,13 +356,19 @@ input {
   gap: 10px;
 }
 
-.map{
+.map_section{
   width: 523px;
   background-color: #161820;
-  position: relative;
   border-radius: 10px;
   overflow: hidden;
+  position: relative;
   /* padding: 10px; */
+}
+#map{
+  height: 100%;
+  width: 100%;
+  position: relative;
+
 }
 .map-search {
   position: absolute;
@@ -385,7 +400,7 @@ input {
 }
 
 .graph-section {
-  height: 420px;
+  height: 430px;
   padding: 10px;
   display: flex;
   flex-wrap: nowrap;
@@ -411,15 +426,15 @@ input {
   background-color: #161820;
   border-radius: 10px;
   height: 100%;
+  padding: 10px;
 
 }
-
-
-.my-chart{
+.myChart{
   width: 100%;
-  height: 350px;
-  background-color: #2a489e;
+  height: 100%;
+  color: white;
 }
+
 
 .messages {
   width: 523px;
@@ -482,11 +497,12 @@ input {
     display: none;
   }
 
+
   .logout {
     display: none;
   }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1025px) {
   .sidebar {
     left: -100vw;
     width: 100%;
@@ -539,7 +555,7 @@ input {
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1025px) {
   .header {
     display: none;
   }
