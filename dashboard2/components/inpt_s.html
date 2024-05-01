@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inout</title>
+    <style>
+        .inp {
+            padding: 8px 5px;
+            width: 85px;
+            position: relative;
+            /* background-color:#E22128; */
+
+            border: 0px;
+            color: white;
+            border-radius: 10px;
+            padding-right: 35px;
+            transition: all 0.3s ease-in-out;
+
+
+        }
+
+        .logo {
+            position: absolute;
+            top: 8px;
+            left: 100px;
+            border: 0px;
+            padding: 5px;
+            background-color:#E22128;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <form action="" class="form">
+            <input type="text" placeholder="Search..." class="inp">
+                  <img src="../public/icons/searchicon.png" alt="search" width="20" height="20" class="logo">
+        </form>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+        <script>
+
+        $(document).ready(function () {
+            // Add a click event handler to the logo image
+            $('.logo').click(function () {
+                // Toggle the background color of the input
+                var currentColor = $('.inp').css('background-color');
+                if (currentColor === 'rgb(255, 0, 0)') {
+                    $('.inp').css('background-color', '');
+                } else {
+                    $('.inp').css('background-color', 'red');
+                }
+            });
+        });
+        </script>
+</body>
+
+</html>

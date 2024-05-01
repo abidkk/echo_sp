@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Drag and Drop Upload</title>
+<style>
+    #drop-area {
+        width: 300px;
+        height: 200px;
+        border: 2px dashed #ccc;
+        border-radius: 10px;
+        text-align: center;
+        padding: 20px;
+        cursor: pointer;
+    }
+    #drop-area.highlight {
+        border-color: #0087F7;
+    }
+</style>
+</head>
+<body>
+
+<div id="drop-area">Drag & Drop files here or click to select</div>
+
+<script>
+    let dropArea = document.getElementById('drop-area');
+
+    ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+        dropArea.addEventListener(eventName, preventDefaults, false);
+    });
+
+    function preventDefaults(e) {
+        e.preventDefault();
+        e.stopPropagation();
+    }
+
+    ['dragenter', 'dragover'].forEach(eventName => {
+        dropArea.addEventListener(eventName, highlight, false);
+    });
+
+    ['dragleave', 'drop'].forEach(eventName => {
+        dropArea.addEventListener(eventName, unhighlight, false);
+    });
+
+    function highlight(e) {
+        dropArea.classList.add('highlight');
+    }
+
+    function unhighlight(e) {
+        dropArea.classList.remove('highlight');
+    }
+
+    dropArea.addEventListener('drop', handleDrop, false);
+
+    function handleDrop(e) {
+        let dt = e.dataTransfer;
+        let files = dt.files;
+
+        handleFiles(files);
+    }
+
+    function handleFiles(files) {
+        files = [...files];
+        files.forEach(uploadFile);
+    }
+
+    function uploadFile(file) {
+        let formData = new FormData();
+        formData.append('file', file);
+
+        // You can perform AJAX upload or any other processing here
+        console.log("Uploading file:", file.name);
+    }
+</script>
+
+</body>
+</html>
